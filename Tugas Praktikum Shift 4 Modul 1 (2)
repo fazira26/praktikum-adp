@@ -1,0 +1,33 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main() {
+    float mean,ragam,simpbaku,tb1,tb2,tb3,tb4,tb5,tb6,tb7,tb8,tb9,tb10;
+    cout << "Praktikum ADP Modul 1 Shift 4.";
+    cout << "\nFazira Ramadhani.";
+    cout << "\n2310432035";
+    cout << "\n";
+    cout << "Hai teman-teman, ini adalah program menghitung rata-rata, ragam, dan simpangan baku.";
+    cout << "\nDisini saya memakai data tinggi badan (dalam cm).";
+    cout << "\nMasukkan tinggi badan (1): "; cin >> tb1;
+    cout << "Masukkan tinggi badan (2): "; cin >> tb2;
+    cout << "Masukkan tinggi badan (3): "; cin >> tb3;
+    cout << "Masukkan tinggi badan (4): "; cin >> tb4;
+    cout << "Masukkan tinggi badan (5): "; cin >> tb5;
+    cout << "Masukkan tinggi badan (6): "; cin >> tb6;
+    cout << "Masukkan tinggi badan (7): "; cin >> tb7;
+    cout << "Masukkan tinggi badan (8): "; cin >> tb8;
+    cout << "Masukkan tinggi badan (9): "; cin >> tb9;
+    cout << "Masukkan tinggi badan (10): "; cin >> tb10;
+    
+    mean = (tb1+tb2+tb3+tb4+tb5+tb6+tb7+tb8+tb9+tb10)/10;
+    ragam = (((tb1-mean)*(tb1-mean))+((tb2-mean)*(tb2-mean))+((tb3-mean)*(tb3-mean))+((tb4-mean)*(tb4-mean))+((tb5-mean)*(tb5-mean))+((tb6-mean)*(tb6-mean))+((tb7-mean)*(tb7-mean))+((tb8-mean)*(tb8-mean))+((tb9-mean)*(tb9-mean))+((tb10-mean)*(tb10-mean)))/10;
+    simpbaku = sqrt(ragam);
+
+    cout << "\n";
+    cout << "\nJadi,";
+    cout << "\nRata-rata dari data tinggi badan diatas adalah "<<mean;
+    cout << "\nRagam dari data tinggi badan diatas adalah "<<ragam;
+    cout << "\nSimpangan baku dari data tinggi badan diatas adalah "<<simpbaku;
+    
+}
