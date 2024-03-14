@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+    float r,lpbola,v;
+    cout << "Praktikum ADP Modul 1 Shift 4.";
+    cout << "\nFazira Ramadhani.";
+    cout << "\n2310432035";
+    cout << "\n";
+    cout << "\nHai teman-teman, ini adalah program menghitung volume dan luas permukaan bola.";
+    cout << "\nMasukkan jari-jari yang diketahui (dalam cm): "; cin >> r;
+    
+    v = (r*r*r*3.14159*4)/3;
+    lpbola = 4*3.14159*r*r;
+    
+    cout << "\nJadi volume bola tersebut adalah "<<v<<" (dalam cm kubik), dan luas permukaan bola tersebut adalah "<<lpbola<<" (dalam cm2).";
+
+    return 0;
+}
