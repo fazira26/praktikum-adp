@@ -1,0 +1,72 @@
+#include <iostream>
+using namespace std;
+string a,b,c;
+int d,e,f,g,total,diskon;
+int main() {
+    cout << "Praktikum ADP Shift 4 Modul 2";
+    cout << "\nFazira Ramadhani";
+    cout << "\n2310432046";
+    cout << "\n";
+    cout << "\nSelamat datang di Bandara Internasional Minangkabau";
+    cout << "\n============================================================";
+    cout << "\nNama anda         : "; cin >> a;
+    cout << "Umur anda (tahun) : "; cin >> b;
+    cout << "Jenis Kelamin     : "; cin >> c;
+    cout << "\n";
+    cout << "\n============================================================";
+    cout << "\nDisini ada tiga tujuan";
+    cout << "\n1. Bali";
+    cout << "\n2. Jakarta";
+    cout << "\n3. Bandung";
+    cout << "\n";
+    cout << "\nPilih tujuan anda (1-3) : "; cin >> d;
+    cout << "\n";
+    cout << "\n============================================================";
+    cout << "\nMohon untuk memilih jenis maskapai yang ada dibawah ini :";
+    cout << "\n1. First Class (Rp.3.000.000)"; 
+    cout << "\n2. Business Class (RP.2.500.000)"; 
+    cout << "\n3. Economy Class (Rp.2.000.000)"; 
+    cout << "\n";
+    cout << "\nPilih jenis maskapai anda :"; cin >> e;
+    cout << "Masukkan jumlah kursi yang ingin anda pesan : "; cin >> f;
+    cout <<"\n";
+    cout <<"\nStruk pemesanan";
+    cout << "\n============================================================";
+    cout << "\nNama             :"<<a;
+    cout << "\nUmur             :"<<b;
+    cout << "\njenis kelamin    :"<<c;
+    cout << "\n---------------------------------";
+    if (d == 1) {
+        cout << "\nKota Tujuan       : Bali";
+    } else if (d == 2) {
+        cout << "\nKota Tujuan       : Jakarta";
+    } else if (d == 3) {
+        cout << "\nKota Tujuan       : Bandung";
+    } else  { 
+        cout << "\nTidak ada tujuan diatas";
+    }
+    if (e == 1) {
+        total = 3000000;
+        cout << "\nJenis Maskapai    : First Class";
+    } else if (e == 2) {
+        total = 2500000;
+        cout << "\nJenis maskapai    : Business Class";
+    } else if (e == 3) {
+        total = 2000000;
+        cout << "\nJenis maskapai    : Economy Class";
+    } else {
+        cout << "\nTidak ada jenis maskapai diatas";
+    }
+    if (f > 3) {
+        diskon = 0.25*total;
+    } else {
+        diskon = 0;
+    }
+    g = total*f-diskon;
+    cout << "\nJumlah tiket      : "<<f;
+    cout << "\nTotal harga tiket : "<<g;
+    cout << "\n=================================================================";
+    cout << "\nSelamat menikmati perjalanan anda";
+    
+    
+}
