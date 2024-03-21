@@ -1,0 +1,66 @@
+print("Praktikum ADP Shift 4 Modul 2")
+print("Fazira Ramadhani")
+print("2310432035")
+print()
+print("Selamat datang di Bandara Internasional Minangkabau")
+print("===========================================================")
+a = str(input("Nama anda         : "))
+b = str(input("Umur anda (tahun) : "))
+c = str(input("Jenis Kelamin     : "))
+print()
+print("===========================================================")
+print("Disini ada tiga tujuan")
+print("1. Bali")
+print("2. Jakarta")
+print("3. Bandung")
+print()
+d = int(input("Pilih tujuan anda (1-3) : "))
+print()
+print("===========================================================")
+print("Mohon untuk memilih jenis maskapai yang ada dibawah ini")
+print("1. First Class (Rp.3.000.000)")
+print("2. Business Class (Rp.2.500.000)")
+print("3. Economy Class (Rp. 2.000.000)")
+print()
+e = int(input("Pilih jenis maskapai anda             : "))
+f = int(input("Masukkan jumlah kursi yang anda pesan : "))
+print()
+print("===========================================================")
+print("Struk Pemesanan")
+print()
+print("Nama             : ",a)
+print("Umur (tahun)     : ",b)
+print("Jenis Kelamin    : ",c)
+print("--------------------------------")
+if (d == 1) :
+    print("Kota Tujuan      : Bali ")
+elif (d == 2) :
+    print("Kota Tujuan      : Jakarta ")
+elif (d == 3) :
+    print("Kota Tujuan      : Bandung ")
+else : 
+    print("Tidak ada kota tujuan diatas")
+
+if (e == 1) :
+    total = 3000000
+    print("Jenis Maskapai   : First Class ")
+elif (e == 2) :
+    total = 2500000
+    print("Jenis Maskapai   : Business Class")
+elif (e == 3) :
+    total = 2000000
+    print("Jenis Maskapai   : Economy Class")
+else : 
+    print("Tidak ada jenis maskapai diatas")
+
+if (f > 3) :
+    diskon = 0.25*total
+else : 
+    diskon = 0
+
+g = total*f-diskon
+
+print("Jumlah Tiket     :",f)
+print("Total Harga (Rp) :",g)
+print("===========================================================")
+print("Selamat menikmati perjalanan anda")
