@@ -1,0 +1,17 @@
+print("Tugas Praktikum ADP Modul 4")
+print("Fazira Ramadhani")
+print("2310432035")
+print()
+total = 1
+jumlah = 0
+for i in range(1, 11):
+    for j in range(1, 11):
+        if (total % 3 == 0) or (total % 5 == 0):
+            print("DOR", end=" ")
+            jumlah += 1
+        else:
+            print(total, end=" ")
+        total += 1
+    print()
+print()
+print("Total DOR yang muncul sebanyak = ", jumlah)
