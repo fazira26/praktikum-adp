@@ -1,0 +1,159 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    cout << "Tugas Praktikum ADP Modul 5" << endl;
+    cout << "Fazira Ramadhani" << endl;
+    cout << "2310432035" << endl;
+    cout << endl;
+    int n;
+    cout << "Masukkan berapa banyak Data 1 = ";
+    cin >> n;
+    int a[n], i, j, k;
+    for (i = 0; i < n; i++)
+    {
+        cout << "Masukkan data ke-" << i + 1 << " = ";
+        cin >> a[i];
+        if (a[i] < 0 || a[i] > 9)
+        {
+            cout << "Elemen harus sebuah bilangan bulat dari 0 sampai 9." << endl;
+            i = i - 1;
+        }
+    }
+    cout << endl;
+    cout << "Masukkan berapa banyak Data 2 = ";
+    cin >> k;
+    int b[k];
+    for (j = 0; j < k; j++)
+    {
+        cout << "Masukkan data ke-" << j + 1 << " = ";
+        cin >> b[j];
+        if (b[j] < 0 || b[j] > 9)
+        {
+            cout << "Elemen harus sebuah bilangan bulat dari 0 sampai 9." << endl;
+            j = j - 1;
+        }
+    }
+
+    cout << endl;
+    cout << endl;
+    cout << " Data 1 = ";
+    for (i = 0; i < n; i++)
+    {
+        cout << a[i] << " ";
+    }
+    cout << endl;
+    cout << " Data 2 = ";
+    for (j = 0; j < k; j++)
+    {
+        cout << b[j] << " ";
+    }
+    cout << endl;
+    cout << endl;
+    if (n > k || k < n)
+    {
+        cout << "Data yang ada di data 1 tetapi tidak ada di data 2 =  ";
+        int z = 0;
+        for (i = 0; i < n; i++)
+        {
+            for (j = 0; j < k; j++)
+            {
+                if (a[i] == b[j])
+                {
+                    z++;
+                }
+            }
+            if (z == 0)
+            {
+                cout << a[i] << " ";
+            }
+        }
+        cout << endl;
+        int g = n + k;
+        cout << "Data yang ada di data 2 tetapi tidak ada di data 1 = ";
+        for (i = 0; i < k; i++)
+        {
+            z = 0;
+            for (j = 0; j < n; j++)
+            {
+                if (b[i] == a[j])
+                {
+                    z++;
+                }
+            }
+            if (z == 0)
+            {
+                cout << b[i] << " ";
+            }
+        }
+        cout << endl;
+        int c[g];
+        cout << "Data yang ada di data 1 dan data 2 = ";
+        for (i = 0; i < n; i++)
+        {
+            for (j = 0; j < k; j++)
+            {
+                if (a[i] == b[j])
+                {
+                    cout << a[i] << " ";
+                    break;
+                }
+            }
+        }
+        cout << endl;
+        cout << "Catatan : Kosong artinya tidak ada.";
+    }
+    else
+    {
+        cout << "Data yang ada di data 1 tetapi tidak ada di data 2 =  ";
+        int z = 0;
+        for (i = 0; i < n; i++)
+        {
+            for (j = 0; j < n; j++)
+            {
+                if (a[i] == b[j])
+                {
+                    z++;
+                }
+            }
+            if (z == 0)
+            {
+                cout << a[i] << " ";
+            }
+        }
+        cout << endl;
+        int g = n + k;
+        cout << "Data yang ada di data 2 tetapi tidak ada di data 1 = ";
+        for (i = 0; i < k; i++)
+        {
+            z = 0;
+            for (j = 0; j < k; j++)
+            {
+                if (b[i] == a[j])
+                {
+                    z++;
+                }
+            }
+            if (z == 0)
+            {
+                cout << b[i] << " ";
+            }
+        }
+        cout << endl;
+        int c[g];
+        cout << "Data yang ada di data 1 dan data 2 = ";
+        for (i = 0; i < n; i++)
+        {
+            for (j = 0; j < n; j++)
+            {
+                if (a[i] == b[j])
+                {
+                    cout << a[i] << " ";
+                    break;
+                }
+            }
+        }
+        cout << endl;
+        cout << "Catatan : Kosong artinya tidak ada.";
+    }
+}
