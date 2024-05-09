@@ -1,0 +1,79 @@
+print("Tugas Praktikum Modul 6 Shift 4")
+print("Fazira Ramadhani")
+print("2310432035")
+print()
+n = int(input("Masukkan jumlah barang = "))
+print()
+a = []
+b = []
+d = []
+g = []
+print("Catatan : Demi kerapian tabel, mohon masukkan nama barang dengan maksimal 4 huruf, Terimakasih.")
+for i in range (n) :
+    c = str(input(f"Masukkan nama barang ke-{i+1} = "))
+    a.append(c)
+print()
+print("Masukkan stok barang yang ada.")
+for i in range (n) :
+    b1 = []
+    print(a[i])
+    for j in range (1) :
+        c = int(input("Masukkan stok barang (dalam buah) = ")) 
+        b1.append(c)
+    b.append(b1)
+print()
+print("Masukkan jumlah harga untuk setiap barang yang ada.")
+for i in range (n) :
+    v = []
+    print(a[i])
+    for j in range (1) :
+       c = int(input("Masukkan jumlah satuan harga (dalam Rp) = "))
+       v.append(c)
+    d.append(v)
+print()
+print("Tabel Harga Jual Barang.")
+print("          ", end = " ")
+print("|---------------||---------------", end = "|")
+print()
+print("          ", end = " ")
+print("|     Harga     ||      Stok     |")
+print("|----------", end = "|")
+print("---------------||---------------", end = "|")
+print()
+for i in range (n) :
+    t = a[i]
+    print(f"|  {t:>4}    ", end = "")
+    for c in d[i] :
+        print(f"|    {c:>6}     ", end = "|")
+    for c in b[i] :
+        print(f"|  {c:>6}       ", end = "|")
+    g1 = d[i][0]*b[i][0]
+    g.append(g1)
+    print()
+print("|----------", end = "|")
+print("---------------||---------------", end = "|")
+print()
+g2 = 0
+for g1 in g :
+    g2 += g1
+g3 = g[0]
+m = 0
+for i in range (1,n) :
+    if g[i] > g3:
+        g3 = g[i]
+        m = i
+namag3 = a[m]
+g4 = g[0]
+m1 = 0
+for i in range (1,n) :
+    if g[i] < g4:
+        g4 = g[i]
+        m1= i
+namag4 = a[m1]
+print()
+print("Jika diasumsikan barang terjual habis, maka :")
+print(f"1. Barang dengan keuntungan terbesar adalah {namag3} dengan total keuntungan sebesar Rp. {g3}")
+print(f"2. Barang dengan keuntungan terkecil adalah {namag4} dengan total keuntungan sebesar Rp. {g4}")
+print(f"3. Total keuntungan yang didapatkan sebesar RP. {g2}")
+print()
+print("Terimakasih")
