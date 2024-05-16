@@ -1,0 +1,35 @@
+print("Praktikum Shift 4 Modul 7")
+print("Fazira Ramadhani")
+print("2310432035")
+print()
+#a sebagai kecepatan awal
+#b sebagai percepatan
+#c sebagai waktu
+#v1 sebagai kecepatan akhir
+#s sebagai jarak
+def kecepatan_akhir_dan_jarak_yang_ditempuh(a,b,c):
+    v1 = a + b*c
+    s = a*c + (b*(c*c))/2
+    return v1, s
+n = int(input("Masukkan berapa banyak data yang ingin dihitung = "))
+print()
+data1 = []
+data2 = []
+data3 = []
+hasil = []
+for i in range (n) :
+    a = float(input(f"Masukkan nilai kecepatan awal dalam (m/s) yang ke {i+1} = "))
+    b = float(input(f"Masukkan nilai percepatan dalam (m/s*s) yang ke {i+1} = "))
+    c = int(input(f"Masukkan nilai waktu dalam (s) yang ke {i+1} = "))
+    data1.append(a)
+    data2.append(b)
+    data3.append(c)
+    hasil.append(kecepatan_akhir_dan_jarak_yang_ditempuh(a,b,c))
+    print()
+print("||--------------------||--------------------||--------------------||--------------------||--------------------||--------------------||")
+print("||          n         ||   Kecepatan Awal   ||     Percepatan     ||        Waktu       ||   Kecepatan akhir  ||        Jarak       ||")
+print("||--------------------||--------------------||--------------------||--------------------||--------------------||--------------------||")
+for i in range (n) :
+    v1, s = hasil[i]
+    print(f"||          {i+1}         ||        {data1[i]:<6}      ||         {data2[i]:<6}     ||        {data3[i]:<6}      ||        {v1:<6}      ||        {s:<6}      ||")
+print("||--------------------||--------------------||--------------------||--------------------||--------------------||--------------------||")
