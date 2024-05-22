@@ -1,0 +1,49 @@
+print("Tugas Praktikum Shift 4 Modul 8")
+print("Fazira Ramadhani")
+print("2310432035")
+print()
+def tambah(a,b,c,d):
+    with open ("bukukeuangan.txt", "a") as file:
+        teks = f"\nTipe              : {a}\nTanggal transaksi : {d}\nKeterangan        : {b}\nJumlah uang (Rp)  : {c}\n"
+        file.write(teks)
+def hapus():
+    open("bukukeuangan.txt", "w").close()
+def tampilkan():
+    with open ("bukukeuangan.txt", "r") as file:
+        teks = file.readlines()
+        for baris in teks:
+            print(baris) 
+while True:
+    print("|---------------------------------|")
+    print("|-------------|Menu|--------------|")
+    print("|    1. Tambah data keuangan      |") 
+    print("|    2. Hapus data keuangan       |")
+    print("|    3. Tampilkan data keuangan   |")
+    print("|    4. Program selesai           |")
+    print()
+    n = int(input("Masukkan pilihan (1/2/3/4) = "))
+    if n == 1:
+        print("Masukkan data keuangan")
+        a = input("Tipe (Pemasukan/pengeluaran)                              = ")
+        b = input("Keterangan (Deskripsi singkat tentang transaksi)          = ")
+        c = input("Jumlah uang (Rp)                                          = ")
+        d = input("Tanggal transaksi (DD/MM/YY)                              = ")
+        tambah(a,b,c,d) 
+        print()
+        print("Data keuangan telah ditambahkan dalam file buku keuangan")
+        print()
+    elif n == 2:
+        hapus()
+        print("Data keuangan telah dihapus")
+        print()
+    elif n == 3:
+        tampilkan()
+        print()
+    elif n == 4:
+        break
+    else:
+        print("Pilihan hanya 1/2/3/4, ulangi kembali")
+        print()
+print()
+print("Mendapatkan uang seperti menggali dengan jarum. Menghabiskan uang seperti air meresap ke pasir.")
+print()
